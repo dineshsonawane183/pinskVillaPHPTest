@@ -55,6 +55,9 @@ init();
                 videoPlayer.addEventListener('swiped-up', function (e) {
                     playVideo(videoPlayer, "next");
                 });
+                videoPlayer.addEventListener('ended', function (e) {
+                    playVideo(videoPlayer, "next");
+                });
                 videoPlayer.addEventListener('swiped-down', function (e) {
                     playVideo(videoPlayer, "prev");
                 });
