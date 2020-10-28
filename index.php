@@ -27,6 +27,7 @@ init();
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <link rel="stylesheet" href="style.css">
         <script src = "./lib/lib.js"></script>
     </head>
     <body>
@@ -40,6 +41,10 @@ init();
                         ?>" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+            <div class="user_text">
+                @<span id="user"><?php echo($feedData[$current]->user->name);?></span><br>
+                <span id="title"><?php echo($feedData[$current]->title)?></span>
+            </div>
         </div>
         <script>
             var videoPlayer = document.getElementById("videoPlayer");
@@ -59,6 +64,8 @@ init();
                     var id = parseInt(document.getElementById('currentVideo').value);
                     if (videoPlayer) {
                         videoPlayer.setAttribute("src", data[id].url);
+                        document.getElementById('user').innerHTML = data[id].user.name;
+                        document.getElementById('title').innerHTML = data[id].title;
                     }
                     if (step == 'next') {
                         if (id < data.length - 1) {

@@ -1,0 +1,9 @@
+.user_text{
+    font-weight: bold;
+    margin-bottom: 1%;
+    position: absolute;
+    bottom: 7%;
+    left: 16px;
+    z-index:2;
+    color: #FFF;
+}
