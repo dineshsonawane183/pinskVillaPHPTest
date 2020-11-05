@@ -7,3 +7,4 @@
     z-index:2;
     color: #FFF;
 }
+video { height: 100vh; min-height: 150%; }

@@ -32,7 +32,7 @@ init();
     </head>
     <body>
         <input id = "currentVideo" type="hidden" value="1"/>
-        <div>
+        <div id="wrapper-video">
             <video id= "videoPlayer" width="100%" height="100%" autoplay>
                 <source id = "srcPlayer" src="<?php
                         global $current;
